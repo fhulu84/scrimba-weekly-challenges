@@ -30,13 +30,16 @@ box.addEventListener("focusout", function(){
 
 // Write your code here 👇
 document.addEventListener("keyup", function(e) {
-  if(box === document.activeElement) {
+  if(e.key === "Enter"){
+    box.focus();
+  }
+  else if(box === document.activeElement) {
     const rating = +e.key;
     if(rating >= 1 && rating <= 5){
       text.textContent = emojis[rating-1];
       setTimeout(() => {
         box.blur();
-      }, 1000);
+      }, 500);
     }
   }  
 })

@@ -9,6 +9,10 @@ html, body {
       Vertically Stack 
       & Horizontally Center contents
   */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #equation-field {
@@ -45,4 +49,9 @@ html, body {
   color: white;
   font-size: 2rem;
   padding: 0.1rem 1rem;
+  margin: 5px;
 }
+
+.equation-component.green {
+  background-color: green;
+} 
